@@ -1,0 +1,402 @@
+        /* Basic primary style  */
+*,*::after, *::before{
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+:active, :focus, :hover{
+    outline: 0 !important;
+    outline-offset: 0;
+}
+a, a:hover{
+    text-decoration: none;
+}
+
+:root{
+    --1st-color:#ffc222;
+    --2nd-color:#00a149;
+    --3rd-color:#fff;
+    --4th-color:#b0b0b0;
+    --5th-color:#1e1d23;
+    --primary-font:'Roboto','sans-serif';
+    --secondry-font:'Quicksand','sans-serif';
+}
+
+a:hover{
+    color: var(--1st-color) !important;
+}
+ul,ol,li{
+    margin: 0;
+    padding: 0;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    font-size: var(--primary-font);
+    font-size: 100%;
+    font-weight: 400;
+}
+        /* sorollbar style  */
+::-webkit-scrollbar{
+    width: 0.625rem;
+}
+::-webkit-scrollbar-track{
+    background: var(--3rd-color);
+}
+::-webkit-scrollbar-thumb{
+    background: var(--2nd-color);
+}
+            /* Custom design style  */
+
+h1{
+    font-size: 58px;
+    font-weight: 900;
+    margin-bottom: 1rem;
+    color: var(--3rd-color);
+    text-shadow: 1px 0 6px #000;
+}
+h1 span{
+    color: var(--1st-color);
+}
+h2{
+    font-size: 2rem;
+    font-weight: 700;
+    text-transform: capitalize;
+    font-family: var(--secondry-font);
+    color: var(--2nd-color);
+    line-height: 3rem;
+}
+h4{
+    color: var(--2nd-color);
+    font-family: var(--secondry-font);
+    text-transform: capitalize;
+    font-size: 1.125rem;
+    font-weight: 800;
+    margin-bottom: 0.5rem;
+}
+h5{
+    color: var(--5th-color);
+    font-family: var(--secondry-font);
+    text-transform: capitalize;
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+p{
+    color: var(--4th-color);
+    font-family: var(--secondry-font);
+    font-weight: 400;
+    line-height: 1.75rem;
+    letter-spacing: 1px;
+}
+.main-btn{
+    display: inline-block;
+    padding: 0.625rem 1.875rem;
+    line-height: 1.5625rem;
+    background-color: var(--1st-color);
+    border: 0.1875rem solid var(--1st-color);
+    color: var(--5th-color);
+    font-size: 0.9375rem;
+    font-weight: 600;
+    text-transform: capitalize;
+    border-radius: 0.5rem;
+    box-shadow: 0px 2px 10px -1px rgba(0 0 0 / 19%);
+    -webkit-transition: all .4s ease-out 0s;
+    -O-transition: all .4s ease-out 0s;
+    -moz-transition: all .4s ease-out 0s;
+    transition: all .4s ease-out 0s;
+}
+.main-btn:hover{
+    color: var(--1st-color);
+    background-color: transparent;
+}
+.wrapper{
+    padding-top: 4.25rem;
+    padding-bottom: 4.25rem;
+}
+.text-content{
+    width: 70%;
+    margin: auto;
+}
+
+        /* header style start here  */
+
+.navigation-warp{
+    position: fixed;
+    width: 100%;
+    left: 0;
+    z-index: 1000;
+    transition: all 0.3s ease-out;
+    -webkit-transition: all 0.3s ease-out;
+}
+.navigation-warp .nav-item{
+    padding: 0 0.26rem;
+    transition: all 0.3s linear;
+}
+.navbar-toggler:focus{
+    outline: unset;
+    border: unset;
+    box-shadow: none;
+}
+.nav-link{
+    font-size: 0.9375rem;
+    font-weight: 600;
+    text-transform: capitalize;
+    color: var(--3rd-color);
+    letter-spacing: 1px;
+}
+.nav-link:hover,.nav-link.active{
+    color: var(--1st-color) !important;
+}
+.navigation-warp .main-btn{
+    padding: 0.3125rem 1.4375rem ;
+    box-shadow: none;
+    margin-left: 0.625rem;
+}
+        /* change navbar style on scroll    */
+
+.navigation-warp .scroll-on{
+    position: fixed;
+    background-color: var(--3rd-color);
+    width: 100%;
+    top: 0;
+    left: 0;
+    box-shadow: 0 0.125rem 1.75rem 0 rgba(0, 0, 0, 0.09);
+    transition: all 0.15s ease-in-out 0s;
+}
+.navigation-warp .scroll-on .nav-link{
+    color: var(--5th-color);
+}
+.navigation-warp .scroll-on .nav-link:hover,
+.navigation-warp .scroll-on .nav-link.active{
+    color: var(--1st-color);
+}
+
+        /* top banner design style  */
+.top-banner{
+    width: 100%;
+    background: url(../images/bg-1.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 16.875rem 0 9.375rem 0;
+}
+.top-banner p{
+    color: var(--3rd-color);
+}
+
+        /* our manu design  */
+
+.our-manu .card{
+    border: none;
+}
+.our-manu .link_category_product{
+    position: relative;
+    display: block;
+    z-index: 1;
+}
+.our-manu .link_category_product::before{
+    position: absolute;
+    content: "";
+    top: 7%;
+    left: 3%;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border:2px dotted var(--2nd-color) ;
+    z-index: -1;
+    transform: translateX(-3%);
+    transform: translateY(-7%);
+    transform: scale(0);
+    background: var(--1st-color);
+    transition: all 0.4s ease;
+    -webkit-transition: all 0.4s ease;
+    -moz-transition: all 0.4s ease;
+    -ms-transition: all 0.4s ease;
+    -o-transition: all 0.4s ease;
+}
+.card:hover .link_category_product::before{
+    transform: translateX(-50%);
+    transform: translateY(-50%);
+    transform: scale(1);
+}
+.our-manu .cat-title a{
+    text-align: center;
+    font-size: 0.8125rem;
+    position: relative;
+    display: inline-block;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: var(--5th-color);
+}
+.card:hover .cat-title a{
+  color: var(--1st-color); 
+}
+        /* about us area design style  */
+
+.about-us{
+    background: var(--5th-color);
+}
+.about-top-area{
+    padding-top: 5rem;
+}
+.about-us .card, 
+.about-us .card img{
+    border-radius: 0.625rem;
+}
+.about-us .text-sec{
+    padding-left: 2rem;
+}
+
+        /* about us food type area   */
+
+.food-type{
+    padding-top: 3.25rem;
+}
+.food-type ul li{
+    font-size: 1rem;
+    color: var(--4th-color);
+    line-height: 32px;
+    position: relative;
+    margin-left: 30px;
+}
+.food-type ul li::before{
+    position: absolute;
+    left: -2rem;
+    color: var(--1st-color);
+    font-size: 1.25rem;
+    font-family: "font awesome 5 free";
+    content: '\f00c';
+    display: inline-block;
+    margin-right: 3px;
+    vertical-align: middle;
+    font-weight: 900;
+
+}
+
+        /* explore Food area start */
+
+.explore-food .card{
+    border: none;
+    background-color: transparent;
+    border-radius: 0.9375rem;
+}
+.explore-food .card img{
+    border-radius: 15px 15px 0 0;
+    object-fit: cover;
+}
+.explore-food .card span{
+    display: block;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--1st-color);
+    padding-bottom: 1rem;
+    border-bottom: 0.0625rem solid #eee;
+}
+.explore-food p{
+    color: var(--4th-color);
+    font-size: 14px;
+    line-height: 22px;
+}
+
+        /* testimonial area start  */
+
+.testimonial{
+    background: var(--2nd-color);
+}
+.testimonial h2{
+    color: var(--3rd-color);
+}
+.testimonial .carousel-item{
+   margin-top: 3rem;
+   padding: 10rem 3.125rem;
+   background-color: var(--5th-color);
+   border-radius: 0.9375rem;
+
+}
+.testimonial .carousel-caption img{
+   max-width: 5rem;
+   border-radius: 50%;
+   padding: 0.3125rem;
+}
+.testimonial .carousel-caption p{
+   font-size: 1.125rem;
+   line-height: 1.5625rem;
+   font-weight: 300;
+   color: var(--3rd-color);
+   padding: 0 11% 0.625rem;
+}
+/* .testimonial .carousel-caption h5{
+   
+} */
+.testimonial .carousel-indicators{
+    bottom: -2.8125rem;
+}
+.testimonial .carousel-indicators button{
+    width: 15px;
+    height: 15px;
+    outline: none;
+    border-radius: 50%;
+    border: none;
+    margin-right: 1rem;
+    opacity: 0.2;
+}
+  
+.testimonial .carousel-indicators button.active{
+    opacity: 1;
+}
+  
+        /* footer style start  */
+
+.footer{
+    background:var(--5th-color);
+}
+.footer .footer-social a i{
+    font-size: 1.5rem;
+    color: var(--3rd-color);
+    padding: 0 1rem;
+}
+.footer .footer-social a i:hover{
+    color: var(--1st-color);
+}
+.newsletter .footer-form{
+    width: 100%;
+    height: 3.225rem;
+    padding: 0 1.25rem;
+    font-size: 0.875rem;
+    border-radius: 0;
+    background: transparent;
+    border: 0.1875rem solid var(--3rd-color);
+    color: var(--5th-color);
+    font-weight: 700;
+}
+.newsletter .footer-form:hover{
+    border: 0.1875rem solid var(--1st-color);
+    color: var(--5th-color);
+}
+.newsletter .footer-form:hover,
+.newsletter .footer-form:focus{
+    outline: none;
+    box-shadow: none;
+    border-color: var(--1st-color);
+}
+
+.newsletter .main-btn{
+    height: 3.225rem;
+    padding: 0 1.25rem;
+    font-size: 0.875rem;
+    border-radius: 0;
+    background-color: var(--3rd-color);
+    border: 0.1875rem solid var(--3rd-color);
+    color: var(--5th-color);
+    font-weight: 700;
+}
+.newsletter:hover .main-btn{
+    background: var(--1st-color);
+    border: 0.1875rem solid var(--1st-color);
+}
+
+    
+
